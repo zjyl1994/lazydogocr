@@ -1,0 +1,36 @@
+html * {
+    max-width: 1000px !important;
+}
+
+footer {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+title {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.inline {
+    margin: 1rem auto;
+    display: flex;
+}
+
+.statusbar{
+    align-items: center;
+}
+
+.inline-item {
+    margin-right: 1rem;
+}
+.inline-item:last-child {
+    flex-grow: 1; 
+    margin-right: initial;
+}
+
+.center{
+    text-align: center;
+}
+#imgbox{
+    box-shadow: 5px 5px 3px 1px #efefef;
+}

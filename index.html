@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/water.min.css">
+    <link rel="stylesheet" href="/assets/index.css">
+    <script defer src="/assets/wasm-feature-detect.min.js"></script>
+    <script defer src="/assets/tesseract.min.js"></script>
+    <script defer src="/assets/index.js"></script>
+    <script defer src="/assets/alpine.min.js"></script>
+    <title>Lazydog OCR</title>
+</head>
+
+<body>
+    <div class="container is-fluid" x-data="data" x-init="simdSupported = await wasmFeatureDetect.simd()"
+        @paste.document="pasteHandler" @drop.document="dropHandler" @dragover.document="preventDefaults">
+
+        <h1 class="title">Lazydog OCR</h1>
+        <hr>
+        <div class="center"><img id="imgbox" :src="imageUrl"></div>
+
+        <div class="inline">
+            <select id="langList" class="inline-item" x-model="selectedLang" @change="langChangeHandler">
+                <option value="eng">English</option>
+                <option value="chi_sim">简体中文</option>
+                <option value="chi_tra">正體中文</option>
+            </select>
+            <input class="inline-item" id="file-input" type="file" accept="image/*" @change="inputChangeHandler">
+        </div>
+
+        <div class="inline statusbar">
+            <div class="inline-item" x-text="progressStatus"></div>
+            <progress class="inline-item" max="100" :value="progressValue" x-text="progressValue + '%'"></progress>
+        </div>
+
+
+        <pre x-show="outputResult"><code x-text="outputResult"></code></pre>
+
+        <footer>
+            <a href="https://github.com/zjyl1994/lazydogocr">Lazydog OCR</a> -
+            基于 <a href="https://github.com/naptha/tesseract.js">Tesseract.js</a> 打造
+        </footer>
+
+    </div>
+</body>
+
+</html>
