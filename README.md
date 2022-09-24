@@ -17,8 +17,7 @@ OCR in browser use Tesseract.js
 # 安装
 
 1. 直接下载，在主机中当作静态网站部署即可。
-2. 使用 Cloudflare Pages 等部署平台直接部署。
-3. 本机使用`python3 -m http.server`等本地HTTP服务器加载。
+1. 本机使用`python3 -m http.server`等本地HTTP服务器加载。
 
 # 依赖版本：
 
