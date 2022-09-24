@@ -18,6 +18,11 @@ OCR in browser use Tesseract.js
 
 1. 直接下载，在主机中当作静态网站部署即可。
 1. 本机使用`python3 -m http.server`等本地HTTP服务器加载。
+1. 部署到 S3 等对象存储中
+1. 部署到 CloudFlare Pages 等云托管中
+
+如果你只需要识别纯英文内容，可以使用部署在 CloudFlare Pages 上的 [在线](ocr.zjyl1994.com) 版本。
+（由于CF Pages最大限制25MB, 所以只装载了英文的训练数据。）
 
 # 依赖版本：
 
