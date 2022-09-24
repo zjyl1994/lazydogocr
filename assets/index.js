@@ -1,7 +1,7 @@
 document.addEventListener('alpine:init', () => {
     Alpine.data('data', () => {
         return {
-            imageUrl: '/assets/placeholder.png',
+            imageUrl: '/assets/image/placeholder.png',
             outputResult: '',
             progressStatus: '就绪.',
             progressValue: 100,

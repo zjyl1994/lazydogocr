@@ -12,6 +12,11 @@
     <script defer src="/assets/index.js"></script>
     <script defer src="/assets/alpine.min.js"></script>
     <title>Lazydog OCR</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/image/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/image/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/image/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
 </head>
 
 <body>
@@ -27,6 +32,7 @@
                 <option value="eng">English</option>
                 <option value="chi_sim">简体中文</option>
                 <option value="chi_tra">正體中文</option>
+                <!-- <option value="lang">在这里加入你的新语言包</option> -->
             </select>
             <input class="inline-item" id="file-input" type="file" accept="image/*" @change="inputChangeHandler">
         </div>
